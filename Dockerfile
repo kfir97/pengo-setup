@@ -46,5 +46,11 @@ RUN apt install -y \
 # RUN git clone https://github.com/Slamtec/rplidar_ros.git src/rplidar_ros
 
 RUN git clone https://github.com/kfir97/pengo-setup.git && \
-    cd robot-setup & \
+    cd pengo-setup && rm Dockerfile README.md && \
     . /opt/ros/melodic/setup.sh && catkin_make
+
+WORKDIR /pengo-setup
+
+ENTRYPOINT ["/bin/bash", "-c", "source /opt/ros/melodic/setup.bash && source /pengo-setup/devel/setup.bash && exec $0 $@"]
+
+CMD ["roslaunch", "robot_setup", "robot_setup.launch"]
