@@ -1,0 +1,7 @@
+<launch>
+    <include file="$(find kobuki_launch)/launch/kobuki.launch"/>
+    <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
+    <include file="$(find robot_setup)/launch/urg_lidar.launch"/>
+    <include file="$(find robot_setup)/launch/slam_gmapping.launch"/>
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
+</launch>
