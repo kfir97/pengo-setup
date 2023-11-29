@@ -5,3 +5,4 @@
     <include file="$(find robot_setup)/launch/slam_gmapping.launch"/>
     <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
     <node pkg="tf" type="static_transform_publisher" name="base_laser_link" args="0.0 0.0 0.3 0 0 0 base_link laser 20" />
+</launch>
