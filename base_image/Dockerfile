@@ -27,6 +27,7 @@ RUN apt install -y \
     ros-melodic-kobuki-dock-drive \
     ros-melodic-tf \
     ros-melodic-image-transport \
+    ros-melodic-image-transport-plugins \
     ros-melodic-resource-retriever \
     ros-melodic-cv-bridge \
     # move base installation
