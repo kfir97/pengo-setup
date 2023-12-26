@@ -5,7 +5,7 @@
     <include file="$(find robot_setup)/launch/slam_gmapping.launch"/>
     <include file="$(find realsense2_camera)/launch/rs_camera.launch"/>
     <node pkg="tf" type="static_transform_publisher" name="base_laser_link" args="0.0 0.0 0.3 0 0 0 base_link laser 20" />
-    <node pkg="tf" type="static_transform_publisher" name="base_laser_link" args="0.25 0.0 0.25 0 0 0 base_link camera_link 20" />
+    <node pkg="tf" type="static_transform_publisher" name="base_camera_link" args="0.25 0.0 0.25 0 0 0 base_link camera_link 20" />
     
     <node pkg="base_link_publisher" type="base_link_publisher_node" name="base_link_publisher_node"/>
     <node pkg="camera_link_publisher" type="camera_link_publisher_node" name="camera_link_publisher_node"/>
