@@ -1,4 +1,4 @@
-#!/usr/bin/env python3  
+#!/usr/bin/env python  
 import rospy
 import math
 import tf
@@ -7,7 +7,7 @@ from geometry_msgs.msg import PoseStamped
 
 
 if __name__ == '__main__':
-    rospy.init_node('base_link_publisher')
+    rospy.init_node('base_link_publisher_node')
 
     listener = tf.TransformListener()
     
